@@ -1,0 +1,22 @@
+services:
+  spark:
+    image: spark:4.2.0-python3
+    working_dir: /opt/project
+    volumes:
+      - ./:/opt/project
+    mem_limit: 2500m
+    cpus: 2.0
+    command:
+      - /opt/spark/bin/spark-submit
+      - --master
+      - local[2]
+      - --driver-memory
+      - 1g
+      - --conf
+      - spark.sql.shuffle.partitions=4
+      - scripts/process_orders_spark.py
+      - --input-dir
+      - "${ORDERS_INPUT_DIR:-data/source/generated_10000}"
+      - --shuffle-partitions
+      - "4"
+

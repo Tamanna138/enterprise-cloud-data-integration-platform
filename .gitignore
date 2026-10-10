@@ -1,0 +1,25 @@
+.jupyter-runtime/
+*.log
+
+# Python environments, caches, and local secrets
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+
+# Generated input and pipeline outputs stay local
+/data/source/generated*/
+/data/bronze/*
+!/data/bronze/.gitkeep
+/data/silver/*
+!/data/silver/.gitkeep
+/data/quarantine/*
+!/data/quarantine/.gitkeep
+/data/gold/*
+!/data/gold/.gitkeep
+/data/metrics/*
+!/data/metrics/.gitkeep
+!/data/metrics/*.json

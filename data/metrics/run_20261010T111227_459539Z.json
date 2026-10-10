@@ -1,0 +1,27 @@
+{
+  "run_id": "run_20261010T111227_459539Z",
+  "synthetic_data": true,
+  "input_directory": "/opt/project/data/source/generated_10000",
+  "source_files": 5,
+  "input_bytes": 720064,
+  "output_bytes_silver_quarantine_gold": 728816,
+  "input_rows": 10000,
+  "valid_rows": 9961,
+  "quarantined_rows": 39,
+  "rejection_rows_by_reason": {
+    "missing_customer_id": 10,
+    "non_positive_or_invalid_quantity": 10,
+    "negative_or_invalid_unit_price": 10,
+    "duplicate_delivery": 9
+  },
+  "elapsed_seconds": 109.923,
+  "rows_per_second": 90.97,
+  "spark_version": "4.2.0",
+  "shuffle_partitions": 4,
+  "execution_mode": "local Docker container",
+  "bronze_path": "/opt/project/data/bronze/run_20261010T111227_459539Z",
+  "silver_path": "/opt/project/data/silver/run_20261010T111227_459539Z",
+  "quarantine_path": "/opt/project/data/quarantine/run_20261010T111227_459539Z",
+  "gold_path": "/opt/project/data/gold/run_20261010T111227_459539Z",
+  "measured_at_utc": "2026-10-10T11:14:25+00:00"
+}
